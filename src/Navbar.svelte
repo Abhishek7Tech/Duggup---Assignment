@@ -1,12 +1,8 @@
 <script lang="ts">
 	import * as Menubar from '$lib/components/ui/menubar/index.js';
-	import * as Avatar from '$lib/components/ui/avatar';
 	import UserBar from './Userbar.svelte';
-
-	let bookmarks = false;
-	let fullUrls = true;
-
-	const profileRadioValue = 'benoit';
+	import Buttons from './Buttons.svelte';
+	
 
 	const menuItems = [
 		{
@@ -30,12 +26,7 @@
 			alt: 'learn icon'
 		},
 
-		{
-			id: 4,
-			name: 'Post',
-			src: '/post-icon.png',
-			alt: 'post icon'
-		}
+		
 	];
 </script>
 
@@ -54,13 +45,20 @@
 		</div>
 		<div class="flex gap-8">
 			{#each menuItems as items (items.id)}
-				<Menubar.Menu>
+				 <Menubar.Menu>
 					<div class="flex items-center">
 						<img class="h-4" src={items.src} alt={items.alt} />
 						<Menubar.Trigger class="text-sm font-normal">{items.name}</Menubar.Trigger>
 					</div>
 				</Menubar.Menu>
 			{/each}
+			<Menubar.Menu>
+				<div class="flex items-center">
+                <Buttons text={'Post'} icon={true}>
+					
+				</Buttons>
+				</div>
+			</Menubar.Menu>
 			<Menubar.Menu>
 				<UserBar />
 			</Menubar.Menu>

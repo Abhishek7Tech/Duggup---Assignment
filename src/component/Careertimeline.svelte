@@ -35,9 +35,9 @@
         <!-- DATE START -->
         <TimelineItem >
             <TimelineSeparator>
-                <TimelineDot style="margin: 0px; border: 3px solid #0066FF; background-color: white; position:relative; right:-4px;" />
+                <TimelineDot style="margin: 0px; border: 3px solid #0066FF; background-color: white; position:relative; right:-5px;" />
                 <TimelineConnector
-                    style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent; margin-left:9px"
+                    style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent; margin-left:10px"
                 />
             </TimelineSeparator>
             <TimelineContent style="margin-top: 0px; margin-left:90%;">
@@ -52,12 +52,12 @@
         <TimelineItem >
             <TimelineSeparator>
                  <TimelineConnector
-                    style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent;margin-left:6px; margin-top:3px;"
+                    style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent;margin-left:4px; margin-top:3px;"
                 /> 
                 <TimelineDot
                     style="margin: 0px; background-color: #fff; border: none; position:relative;"
                 >
-                    <ChevronsUp style="color:#778FB1; position:absolute; top: -10px; right: -12px;" />
+                    <ChevronsUp style="color:#778FB1; position:absolute; top: -10px; right: -10px;" />
                 </TimelineDot>
             </TimelineSeparator>
             <TimelineContent style="margin-left:100%"></TimelineContent>

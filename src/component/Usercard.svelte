@@ -12,7 +12,7 @@
  const jobTitle = currentCompany[0].position; 
 </script>
 
-<Card.Root class="mx-auto my-8 flex w-[984px] justify-between border-0">
+<Card.Root class="mx-auto my-8 flex w-[984px] font-inter justify-between border-0">
 	<Card.Header>
 		<div class="w-min flex-col">
 			<Avatar.Root class="h-24 w-24 rounded-full border-2 border-secondary">

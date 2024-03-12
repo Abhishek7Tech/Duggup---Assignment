@@ -17,7 +17,7 @@
      );
 </script>
 
-<section class="flex gap-8">
+<section class="flex gap-8 font-inter">
 	{#each updatedArray as quote}
 		<div class="h-[60px] w-[344px] rounded-xl">
 			<Card.Root>

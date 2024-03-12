@@ -41,7 +41,7 @@
                 />
             </TimelineSeparator>
             <TimelineContent style="margin-top: 0px; margin-left:90%;">
-                <h3 style="font-weight: 400; font-size: 12px; line-height: 14.52px; color: #7A9299; width: max-content;">
+                <h3 style="font-weight: 400; font-size: 12px; line-height: 14.52px; color: #7A9299; width: max-content; font-family:Inter">
                     {position.date}
                 </h3>
             </TimelineContent>
@@ -52,12 +52,12 @@
         <TimelineItem >
             <TimelineSeparator>
                  <TimelineConnector
-                    style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent;margin-left:3px; margin-top:2px;"
+                    style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent;margin-left:6px; margin-top:3px;"
                 /> 
                 <TimelineDot
                     style="margin: 0px; background-color: #fff; border: none; position:relative;"
                 >
-                    <ChevronsUp style="color:#778FB1; position:absolute; top: -10px; right: -10px;" />
+                    <ChevronsUp style="color:#778FB1; position:absolute; top: -10px; right: -12px;" />
                 </TimelineDot>
             </TimelineSeparator>
             <TimelineContent style="margin-left:100%"></TimelineContent>
@@ -78,7 +78,7 @@
                 />
             </TimelineSeparator>
             <TimelineContent style="margin-left:100%;">
-                <div class="mr-2 flex flex-col items-end">
+                <div class="mr-2 flex flex-col items-end font-inter">
                     <img src={position.img} alt={position.companyName} class="h-12 w-12" />
                     <h3 class="text-base font-bold">{position.companyName}</h3>
                     <span class="text-xs font-normal text-texts w-max">{position.location}</span>

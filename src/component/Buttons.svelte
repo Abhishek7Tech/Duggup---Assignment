@@ -11,5 +11,5 @@
     <img class="h-4" src='/post-icon.png' alt='post icon' />
 
     {/if}
-   <span class="text-primary text-sm font-normal">{text}</span> 
+   <span class="text-primary text-sm font-normal font-inter">{text}</span> 
   </Button>

@@ -40,7 +40,7 @@
 	}
 </script>
 
-<div class="flex gap-1">
+<div class="flex gap-1 ">
     <Avatar.Root class="border rounded-full border-black">
         <Avatar.Image src={$userInfo[0].profilePicture} alt={`user ${value}`} />
         <Avatar.Fallback>KR</Avatar.Fallback>

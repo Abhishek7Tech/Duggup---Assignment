@@ -41,14 +41,14 @@
 	<Menubar.Root class="mx-16 flex h-16 justify-between border-2 border-x-0 border-dotted">
 		<div class="flex gap-2">
 			<img src="/nav-logo.svg" alt="duggup-logo" />
-			<h3 class="font-medium">duggup</h3>
+			<h3 class="font-medium font-inter">duggup</h3>
 		</div>
 		<div class="flex gap-8">
 			{#each menuItems as items (items.id)}
 				 <Menubar.Menu>
 					<div class="flex items-center">
 						<img class="h-4" src={items.src} alt={items.alt} />
-						<Menubar.Trigger class="text-sm font-normal">{items.name}</Menubar.Trigger>
+						<Menubar.Trigger class="text-sm font-normal font-inter">{items.name}</Menubar.Trigger>
 					</div>
 				</Menubar.Menu>
 			{/each}

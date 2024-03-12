@@ -7,7 +7,7 @@
 	import Usercard from '../component/Usercard.svelte';
 	
 </script>
-<Navbar class="font-inter"/>
-<Usercard class="font-inter"/>
-<Career class="font-inter"/>
+<Navbar />
+<Usercard />
+<Career />
 <slot />

@@ -24,37 +24,37 @@
         
 
         <!-- DATE START -->
-        <TimelineItem style="right:100px;">
+        <TimelineItem >
             <TimelineSeparator></TimelineSeparator>
-            <TimelineContent style="margin-top: 0px">
+            <TimelineContent style="margin-top: 0px;">
                 <Quotescard quotesArray={position.quotes} />
             </TimelineContent>
         </TimelineItem>
         <!-- DATE END -->
 
         <!-- ARROW START -->
-        <TimelineItem style="right:100px;">
+        <TimelineItem >
             <TimelineSeparator></TimelineSeparator>
             <TimelineContent></TimelineContent>
         </TimelineItem>
         <!-- ARROW END -->
 
             <!-- EMPTY START -->
-        <TimelineItem style="right:100px;">
+        <TimelineItem >
             <TimelineSeparator></TimelineSeparator>
             <TimelineContent></TimelineContent>
         </TimelineItem>
         <!-- EMPTY END -->
 
             <!-- EMPTY START --> 
-         <TimelineItem style="right:100px;">
+         <TimelineItem >
             <TimelineSeparator></TimelineSeparator>
             <TimelineContent></TimelineContent>
         </TimelineItem> 
         <!-- EMPTY END
 
         <!-- CONTENT START -->
-        <TimelineItem style="right:100px;">
+        <TimelineItem >
             <TimelineSeparator></TimelineSeparator>
             <TimelineContent style="margin-top:0px;">
                 <Positioncard position={position.position} jobType={position.jobType} />
@@ -62,7 +62,7 @@
         </TimelineItem>
         <!-- CONTENT END -->
         <!-- EMPTY START -->
-        <TimelineItem style="right:100px; min-height:75px;">
+        <TimelineItem style="min-height:75px;">
             <TimelineSeparator></TimelineSeparator>
             <TimelineContent></TimelineContent>
         </TimelineItem>

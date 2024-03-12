@@ -19,29 +19,29 @@
 	 export let positions;
 </script>
 
-<Timeline position="left">
+<Timeline style="padding: 6px 4px; flex-grow:unset" position="left">
     {#each positions as position}
         <!-- EMPTY START -->
-        <TimelineItem style="left: 20px;">
+        <TimelineItem >
             <TimelineSeparator>
                 <TimelineConnector
                     style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent; min-height: 90px"
                 />
             </TimelineSeparator>
-            <TimelineContent></TimelineContent>
+            <TimelineContent style="background-color:blue; margin-left:100%"></TimelineContent>
         </TimelineItem>
         <!-- EMPTY END -->
 
         <!-- DATE START -->
-        <TimelineItem style="left: 20px;">
+        <TimelineItem >
             <TimelineSeparator>
-                <TimelineDot style="margin: 0px; border: 3px solid #0066FF; background-color: white;" />
+                <TimelineDot style="margin: 0px; border: 3px solid #0066FF; background-color: white; position:relative; right:-4px;" />
                 <TimelineConnector
-                    style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent;"
+                    style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent; margin-left:9px"
                 />
             </TimelineSeparator>
-            <TimelineContent style="margin-top: 0px">
-                <h3 style="font-weight: 400; font-size: 12px; line-height: 14.52px; color: #7A9299;">
+            <TimelineContent style="margin-top: 0px; margin-left:90%;">
+                <h3 style="font-weight: 400; font-size: 12px; line-height: 14.52px; color: #7A9299; width: max-content;">
                     {position.date}
                 </h3>
             </TimelineContent>
@@ -49,23 +49,24 @@
         <!-- DATE END -->
 
         <!-- ARROW START -->
-        <TimelineItem style="left: 20px; top:4px;">
+        <TimelineItem >
             <TimelineSeparator>
-                <TimelineConnector
-                    style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent;"
-                />
+                 <TimelineConnector
+                    style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent;margin-left:3px; margin-top:2px;"
+                /> 
                 <TimelineDot
                     style="margin: 0px; background-color: #fff; border: none; position:relative;"
                 >
-                    <ChevronsUp style="color:#778FB1; position:absolute; top: -10px; right: -8px;" />
+                    <ChevronsUp style="color:#778FB1; position:absolute; top: -10px; right: -10px;" />
                 </TimelineDot>
             </TimelineSeparator>
-            <TimelineContent></TimelineContent>
+            <TimelineContent style="margin-left:100%"></TimelineContent>
         </TimelineItem>
         <!-- ARROW END -->
 
         <!-- CONTENT START -->
-        <TimelineItem style="left: 20px;">
+        <!-- <div class="mr-7"> -->
+        <TimelineItem >
             <TimelineSeparator>
                 <div class="absolute">
                     <TimelineDot
@@ -76,26 +77,28 @@
                     style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent;"
                 />
             </TimelineSeparator>
-            <TimelineContent>
+            <TimelineContent style="margin-left:100%;">
                 <div class="mr-2 flex flex-col items-end">
                     <img src={position.img} alt={position.companyName} class="h-12 w-12" />
                     <h3 class="text-base font-bold">{position.companyName}</h3>
-                    <h4 class="text-xs font-normal text-texts">{position.location}</h4>
-                    <h4 class="text-xs font-normal text-texts">{position.status}</h4>
-                    <h5 class="text-xs font-normal text-texts">{position.joining}</h5>
+                    <span class="text-xs font-normal text-texts w-max">{position.location}</span>
+                    <span class="text-xs font-normal text-texts w-max">{position.status}</span>
+                    <span class="text-xs font-normal text-texts w-max">{position.joining}</span>
                 </div>
             </TimelineContent>
         </TimelineItem>
+    <!-- </div> -->
         <!-- CONTENT END -->
         <!-- EMPTY START -->
-        <TimelineItem style="left: 20px; top:4px;">
+        <TimelineItem style="top:4px;">
             <TimelineSeparator>
                 <TimelineConnector
                     style="width: 0px; border-left: 4px dotted #778FB1; background-color:transparent;"
                 />
             </TimelineSeparator>
-            <TimelineContent></TimelineContent>
+            <TimelineContent style="margin-left:100%"></TimelineContent>
         </TimelineItem>
         <!-- EMPTY END -->
     {/each}
 </Timeline>
+

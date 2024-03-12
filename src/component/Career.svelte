@@ -6,7 +6,7 @@
 	import Careerhiglights from './Careerhiglights.svelte';
 </script>
 
-<aside class="flex">
+<aside class="flex ml-48 w-[987px]">
 	<Careertimeline positions={positions}/>
 
 	<Careerhiglights positions={positions}/>

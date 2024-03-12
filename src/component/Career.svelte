@@ -1,5 +1,5 @@
 <script>
-	import { userInfo } from './stores';
+	import { userInfo } from '../stores';
 
 	const positions = $userInfo[0].positions;
 	import Careertimeline from './Careertimeline.svelte';

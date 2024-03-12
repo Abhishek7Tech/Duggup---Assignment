@@ -1,8 +1,8 @@
 <script>
 	import '../app.pcss';
-	import Career from '../Career.svelte';
-	import Navbar from '../Navbar.svelte';
-	import Usercard from '../Usercard.svelte';
+	import Career from '../component/Career.svelte';
+	import Navbar from '../component/Navbar.svelte';
+	import Usercard from '../component/Usercard.svelte';
 	
 </script>
 <Navbar/>

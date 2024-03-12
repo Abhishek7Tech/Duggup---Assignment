@@ -2,7 +2,7 @@
 	import * as Card from '$lib/components/ui/card/index.js';
 	import * as Avatar from '$lib/components/ui/avatar';
 	import Buttons from './Buttons.svelte';
-	import { userInfo } from './stores';
+	import { userInfo } from '../stores';
 
  const name = $userInfo[0].name;
  const profilePicture = $userInfo[0].profilePictureFull;

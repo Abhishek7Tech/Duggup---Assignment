@@ -7,7 +7,10 @@
 	import { tick } from 'svelte';
 	import Check from 'lucide-svelte/icons/check';
 	import * as Avatar from '$lib/components/ui/avatar';
-	import { userInfo, userName } from './stores';
+	import { userInfo, userName } from '../stores';
+
+	// const userData = usersNames.subscribe((info) => console.log(info))
+
 	const users = [
 		{
 			value: $userInfo[0].name,
@@ -15,8 +18,8 @@
 		},
 		
 		// {
-		// 	value: 'USER-3',
-		// 	label: 'user-3'
+		// 	value: 'Elon Musk',
+		// 	label: 'Elon musk'
 		// },
 		// {
 		// 	value: 'USER-4',
@@ -24,13 +27,11 @@
 		// }
 	];
 
+	// const users = usersData;
 	let open = false;
 	let value = $userInfo[0].name;
-
 	$: selectedValue = users.find((f) => f.value === value)?.value ?? 'More Profiles...';
-	// We want to refocus the trigger button when the user selects
-	// an item from the list so users can continue navigating the
-	// rest of the form with the keyboard.
+	
 	function closeAndFocusTrigger(triggerId: string) {
 		open = false;
 		tick().then(() => {
@@ -39,7 +40,7 @@
 	}
 </script>
 
-<div class="flex gap-1 ">
+<div class="flex gap-1">
     <Avatar.Root class="border rounded-full border-black">
         <Avatar.Image src={$userInfo[0].profilePicture} alt={`user ${value}`} />
         <Avatar.Fallback>KR</Avatar.Fallback>

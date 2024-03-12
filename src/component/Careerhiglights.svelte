@@ -19,7 +19,7 @@
 	 export let positions;
 </script>
 
-<Timeline position="left">
+<Timeline style="margin-right:150px" position="left">
     {#each positions as position}
         
 

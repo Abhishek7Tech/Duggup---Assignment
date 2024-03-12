@@ -62,7 +62,7 @@
         </TimelineItem>
         <!-- CONTENT END -->
         <!-- EMPTY START -->
-        <TimelineItem style="min-height:75px;">
+        <TimelineItem style="min-height:65px;">
             <TimelineSeparator></TimelineSeparator>
             <TimelineContent></TimelineContent>
         </TimelineItem>

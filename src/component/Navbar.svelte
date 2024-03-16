@@ -2,7 +2,9 @@
 	import * as Menubar from '$lib/components/ui/menubar/index.js';
 	import UserBar from './Userbar.svelte';
 	import Buttons from './Buttons.svelte';
-	
+	import {userInfo} from '../stores';
+
+	console.log("NAV", userInfo)
 
 	const menuItems = [
 		{
@@ -28,6 +30,7 @@
 
 		
 	];
+	
 </script>
 
 <nav>
@@ -39,9 +42,9 @@
 	{/each}
 
 	<Menubar.Root class="mx-16 flex h-16 justify-between border-2 border-x-0 border-dotted">
-		<div class="flex gap-2">
-			<img src="/nav-logo.svg" alt="duggup-logo" />
-			<h3 class="font-medium font-inter">duggup</h3>
+		<div class="flex gap-2 items-center">
+			<img src={$userInfo[0].logo} alt= {`${$userInfo[0].logoName}-logo`} />
+			<h3 class="font-medium font-inter">{$userInfo[0].logoName}</h3>
 		</div>
 		<div class="flex gap-8">
 			{#each menuItems as items (items.id)}

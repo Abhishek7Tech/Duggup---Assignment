@@ -4,34 +4,44 @@
 	import * as Popover from '$lib/components/ui/popover/index.js';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { cn } from '$lib/utils.js';
-	import { tick } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import Check from 'lucide-svelte/icons/check';
 	import * as Avatar from '$lib/components/ui/avatar';
-	import { userInfo, userName } from '../stores';
+	import { userInfo, userName,usersNames } from '../stores';
 
-	// const userData = usersNames.subscribe((info) => console.log(info))
+	interface Users {
+		value: string,
+		label: string
+	}
+	let users: Users[] = [];
 
-	const users = [
-		{
-			value: $userInfo[0].name,
-			label: $userInfo[0].name.toLowerCase()
-		},
+	userName.subscribe((info) => console.log(info))
+	
+	
+		usersNames.subscribe((info) => users = info);
+		console.log("USER SET", users);
+	
+	
+	// const users = [
+	// 	{
+	// 		value: $userInfo[0].name,
+	// 		label: $userInfo[0].name.toLowerCase()
+	// 	},
 		
-		// {
-		// 	value: 'Elon Musk',
-		// 	label: 'Elon musk'
-		// },
-		// {
-		// 	value: 'USER-4',
-		// 	label: 'user-4'
-		// }
-	];
+	// 	// {
+	// 	// 	value: 'Elon Musk',
+	// 	// 	label: 'Elon musk'
+	// 	// },
+	// 	// {
+	// 	// 	value: 'USER-4',
+	// 	// 	label: 'user-4'
+	// 	// }
+	// ];
 
 	// const users = usersData;
 	let open = false;
 	let value = $userInfo[0].name;
 	$: selectedValue = users.find((f) => f.value === value)?.value ?? 'More Profiles...';
-	
 	function closeAndFocusTrigger(triggerId: string) {
 		open = false;
 		tick().then(() => {
@@ -43,7 +53,7 @@
 <div class="flex gap-1 ">
     <Avatar.Root class="border rounded-full border-black">
         <Avatar.Image src={$userInfo[0].profilePicture} alt={`user ${value}`} />
-        <Avatar.Fallback>KR</Avatar.Fallback>
+        <Avatar.Fallback>{$userInfo[0].name.slice(0,2).toUpperCase()}</Avatar.Fallback>
     </Avatar.Root>
 
 	<Popover.Root  bind:open let:ids>
@@ -68,7 +78,9 @@
 						<Command.Item
 							value={user.value}
 							onSelect={(currentValue) => {
+								{console.log("VALUE",currentValue)}
 								value = currentValue;
+								userName.set(value);
 								closeAndFocusTrigger(ids.trigger);
 							}}
 						>

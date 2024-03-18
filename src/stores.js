@@ -1,21 +1,8 @@
-import { writable, derived } from 'svelte/store';
-import { userData } from './routes/data';
+import { writable } from 'svelte/store';
 
-export const usersNames = writable([{ value: 'Krishna Kiran', label: 'krishna kiran' },
-{ value: 'Elon Musk', label: 'Elon Musk' }
+
+export const usersNames = writable([{ value: 'Krishna Kiran', label: 'krishna', id: 1 },
+{ value: 'Elon Musk', label: 'elon', id:2 }
 ]);
 
-export const userName = writable('Krishna Kiran');
-console.log("NAME UPDATED", userName.subscribe((info) => info));
-
-export const userInfo = derived(userName, function () {
-	// @ts-ignore
-	/**
-	 * @type {string}
-	 */
-	let usr;
-	userName.subscribe((name) => (usr = name));
-	const user = userData.filter((user) => user.name === usr);
-	console.log("USR ARRAY", user);
-	return user;
-});
+// export const userName = writable('Krishna Kiran');

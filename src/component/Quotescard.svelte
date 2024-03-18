@@ -23,10 +23,10 @@
 			<Card.Root>
 				<Card.Header class="p-0">
 					<!-- svelte-ignore a11y-img-redundant-alt -->
-					<img src={quote.img} alt="quotes image" />
+					<img class="w-[344px] h-[136px]" src={quote.img} alt="quotes image" />
 				</Card.Header>
 				<Card.Content class="py-0 px-2">
-					<p class="text-sm font-normal px-4 py-4 text-justify">{quote.quote}</p>
+					<p class="text-sm font-normal px-3 py-4 text-justify">{quote.quote}</p>
 				</Card.Content>
 			</Card.Root>
 		</div>

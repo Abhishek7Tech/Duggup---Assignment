@@ -1,7 +1,7 @@
 export const userData = [
     {
         name: "Krishna Kiran",
-        label: "Krishna Kiran",
+        label: "krishna",
         profilePicture: "/krishna/krishna-kiran.png",
         profilePictureFull: "/krishna/krishna-kiran-full.png",
         bio: "Co-Founder and CEO at Duggup - Social network for people in tech. Ex-Amazon Head of Engineering. I write hot-takes on building a business, shipping delightful products and accelerating product and career growth.",
@@ -60,7 +60,7 @@ export const userData = [
 
     {
         name: "Elon Musk",
-        label: "Elon Musk",
+        label: "elon",
         profilePicture: "/musk/elon-musk.png",
         profilePictureFull: "/musk/elon-musk-full.png",
         bio: "Founder and CEO of SpaceX and Tesla, Inc. Former PayPal co-founder and CEO. Passionate about advancing technology, space exploration, and sustainable energy solutions. Writes extensively on innovation, entrepreneurship, and the future of humanity.",

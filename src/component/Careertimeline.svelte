@@ -11,7 +11,6 @@
 	// @ts-ignore
 	import Quotescard from './Quotescard.svelte';
 	import Positioncard from './Positioncard.svelte';
-	import { userInfo } from '../stores';
 
 	/**
 	 * @type {any}

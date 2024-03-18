@@ -4,23 +4,25 @@
 	import * as Popover from '$lib/components/ui/popover/index.js';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { cn } from '$lib/utils.js';
-	import { onMount, tick } from 'svelte';
+	import { onMount, setContext, tick } from 'svelte';
 	import Check from 'lucide-svelte/icons/check';
 	import * as Avatar from '$lib/components/ui/avatar';
-	import { userInfo, userName,usersNames } from '../stores';
+	import { usersNames } from '../stores';
+	import {navigating, page} from "$app/stores";
+	import { goto } from '$app/navigation';
+	import { redirect } from '@sveltejs/kit';
 
+	export let userData;
+	const profilePicture = userData[0].profilePicture;
+	const userName = userData[0].name;
 	interface Users {
 		value: string,
-		label: string
+		label: string,
+		id:number
 	}
 	let users: Users[] = [];
 
-	userName.subscribe((info) => console.log(info))
-	
-	
 		usersNames.subscribe((info) => users = info);
-		console.log("USER SET", users);
-	
 	
 	// const users = [
 	// 	{
@@ -40,7 +42,7 @@
 
 	// const users = usersData;
 	let open = false;
-	let value = $userInfo[0].name;
+	let value = userName;
 	$: selectedValue = users.find((f) => f.value === value)?.value ?? 'More Profiles...';
 	function closeAndFocusTrigger(triggerId: string) {
 		open = false;
@@ -48,12 +50,13 @@
 			document.getElementById(triggerId)?.focus();
 		});
 	}
+
 </script>
 
 <div class="flex gap-1 ">
     <Avatar.Root class="border rounded-full border-black">
-        <Avatar.Image src={$userInfo[0].profilePicture} alt={`user ${value}`} />
-        <Avatar.Fallback>{$userInfo[0].name.slice(0,2).toUpperCase()}</Avatar.Fallback>
+        <Avatar.Image src={profilePicture} alt={`user-${userName}`} />
+        <Avatar.Fallback>{userName.slice(0,2).toUpperCase()}</Avatar.Fallback>
     </Avatar.Root>
 
 	<Popover.Root  bind:open let:ids>
@@ -78,14 +81,15 @@
 						<Command.Item
 							value={user.value}
 							onSelect={(currentValue) => {
-								{console.log("VALUE",currentValue)}
 								value = currentValue;
-								userName.set(value);
 								closeAndFocusTrigger(ids.trigger);
 							}}
+							
 						>
+						<a href={`/users/${user.id.toString()}`} class="flex items-end">
 							<Check class={cn('mr-2 h-4 w-4', value !== user.value && 'text-transparent')} />
-							{user.label}
+							{user.value}
+							</a>
 						</Command.Item>
 					{/each}
 				</Command.Group>

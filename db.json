@@ -143,6 +143,68 @@
                     "logoName": "X"
                 }
             ]
+        },
+        {
+            "id": 3,
+            "details": [
+                {
+                    "id": 3,
+                    "name": "Jeff Bezos",
+                    "label": "jeff",
+                    "profilePicture": "/jeff/jeff-bezos.png",
+                    "profilePictureFull": "/jeff/jeff-bezos-full.png",
+                    "bio": "Entrepreneur and visionary leader. Founder of Amazon.com, revolutionizing e-commerce globally. Pioneer in cloud computing with Amazon Web Services (AWS). Founded Blue Origin for space exploration. Inspires through innovation, technology, and philanthropy.",
+                    "positions": [
+                        {
+                            "id": "1",
+                            "date": "April 1994",
+                            "img": "/jeff/amazon.png",
+                            "companyName": "Amazon",
+                            "location": "Seattle, Washington.",
+                            "status": "Joined",
+                            "joining": "April 1994",
+                            "currentCompany": true,
+                            "quotes": [
+                                {
+                                    "img": "/jeff/card-1.png",
+                                    "quote": "Your brand is what people say about you when you're not in the room."
+                                },
+                                {
+                                    "img": "/jeff/card-2.png",
+                                    "quote": "If you double the number of experiments you do per year, you're going to double your inventiveness."
+                                }
+                            ],
+                            "position": " Executive Chairman",
+                            "jobType": "Owner"
+                        },
+                        {
+                            "id": "2",
+                            "date": "Sept 2000",
+                            "img": "/jeff/blue-orizon.png",
+                            "companyName": "Blue Origin",
+                            "location": "Washington, United States",
+                            "status": "Joined",
+                            "joining": "Sept 2000",
+                            "currentCompany": true,
+                            "quotes": [
+                                {
+                                    "img": "/jeff/card-3.png",
+                                    "quote": "We see our customers as invited guests to a party, and we are the hosts. It's our job every day to make every important aspect of the customer experience a little bit better."
+                                },
+                                {
+                                    "img": "/jeff/card-4.png",
+                                    "quote": "Your brand is what people say about you when you're not in the room."
+                                }
+                            ],
+                            "position": "Founder",
+                            "jobType": "Full-time"
+                        }
+                        
+                    ],
+                    "logo": "/jeff/amazon-logo.svg",
+                    "logoName": "amazon"
+                }
+            ]
         }
     ]
 }

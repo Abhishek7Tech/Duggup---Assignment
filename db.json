@@ -205,6 +205,89 @@
                     "logoName": "amazon"
                 }
             ]
+        },
+        {
+            "id": 4,
+            "details": [
+                {
+                    "id": 2,
+                    "name": "Mark Zuckerberg",
+                    "label": "mark",
+                    "profilePicture": "/mark/mark-zukerberg.png",
+                    "profilePictureFull": "/mark/mark-zukerberg-full.png",
+                    "bio": "Mark Zuckerberg is the co-founder and CEO of Meta Platforms, Inc., formerly known as Facebook, Inc. A trailblazing entrepreneur and tech titan, Zuckerberg has played a pivotal role in shaping the digital landscape and revolutionizing social networking.",
+                    "positions": [
+                        {
+                            "id": "1",
+                            "date": "Jan 2004",
+                            "img": "/mark/facebook.png",
+                            "companyName": "Facebook",
+                            "location": "Menlo Park, CA",
+                            "status": "Joined",
+                            "joining": "Jan 2004",
+                            "currentCompany": true,
+                            "quotes": [
+                                {
+                                    "img": "/mark/card-1.png",
+                                    "quote": "The biggest risk is not taking any risk. In a world that's changing quickly, the only strategy that is guaranteed to fail is not taking risks."
+                                },
+                                {
+                                    "img": "/mark/card-2.png",
+                                    "quote": "The question I ask myself like almost every day is, 'Am I doing the most important thing I could be doing?"
+                                }
+                            ],
+                            "position": "Co-founder and CEO",
+                            "jobType": "Owner"
+                        },
+                        {
+                            "id": "2",
+                            "date": "April 2012",
+                            "img": "/mark/instagram.png",
+                            "companyName": "Instagram",
+                            "location": "Willow Rd, U.S.A",
+                            "status": "Joined",
+                            "joining": "April 2012",
+                            "currentCompany": true,
+                            "quotes": [
+                                {
+                                    "img": "/mark/card-3.png",
+                                    "quote": "Move fast and break things. Unless you are breaking stuff, you are not moving fast enough."
+                                },
+                                {
+                                    "img": "/mark/card-4.png",
+                                    "quote": "The thing that we are trying to do at meta, is just help people connect and communicate more efficiently."
+                                }
+                            ],
+                            "position": " Executive Chairman",
+                            "jobType": "Full-time"
+                        },
+                        {
+                            "id": "3",
+                            "date": "Nov 2023",
+                            "img": "/mark/whats-app.png",
+                            "companyName": "Whatsapp",
+                            "location": "Menlo Park, California",
+                            "status": "Joined",
+                            "joining": "Nov 2023",
+                            "currentCompany": true,
+                            "quotes": [
+                                {
+                                    "img": "/mark/card-5.png",
+                                    "quote": "By giving people the power to share, we're making the world more transparent."
+                                },
+                                {
+                                    "img": "/mark/card-6.png",
+                                    "quote": "The only strategy that is guaranteed to fail is not taking risks."
+                                }
+                            ],
+                            "position": "Executive Chairman",
+                            "jobType": "Full-time"
+                        }
+                    ],
+                    "logo": "/mark/meta-logo.png",
+                    "logoName": "Meta"
+                }
+            ]
         }
     ]
 }

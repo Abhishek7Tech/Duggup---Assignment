@@ -44,7 +44,7 @@ interface Details {
 
 <Card.Root class="mx-auto my-8 flex w-[984px] justify-between border-0 font-inter">
 	<Card.Header>
-		<div class="w-min flex-col">
+		<div class="w-min flex flex-col flex-nowrap items-center">
 			<Avatar.Root class="h-24 w-24 rounded-full border-2 border-secondary">
 				<Avatar.Image src={profilePicture} alt={`user-${userName}`} />
 				<Avatar.Fallback>{userName.slice(0,2).toUpperCase()}</Avatar.Fallback>

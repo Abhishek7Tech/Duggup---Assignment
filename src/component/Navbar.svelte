@@ -34,7 +34,7 @@ interface Details {
 }
 	export let userInfo:Details[];
 	// const currentCompany = $userInfo.positions?.filter((company: { currentCompany: boolean; }) => company.currentCompany === true);
-	
+	console.log("USERINFO NAVBAR", userInfo);
 	
 	const companyLogo = userInfo[0].logo;
 	const companyName = userInfo[0].logoName;

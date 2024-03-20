@@ -2,36 +2,8 @@
 	import * as Menubar from '$lib/components/ui/menubar/index.js';
 	import UserBar from './Userbar.svelte';
 	import Buttons from './Buttons.svelte';
-	interface Quote {
-  img: string;
-  quote: string;
-}
+	import type { Details } from '../types/types';
 
-interface Position {
-  id: string;
-  date: string;
-  img: string;
-  companyName: string;
-  location: string;
-  status: string;
-  joining: string;
-  currentCompany: boolean;
-  quotes: Quote[];
-  position: string;
-  jobType: string;
-}
-
-interface Details {
-  id: number;
-  name: string;
-  label: string;
-  profilePicture: string;
-  profilePictureFull: string;
-  bio: string;
-  positions: Position[];
-  logo: string;
-  logoName: string;
-}
 	export let userInfo:Details[];
 	// const currentCompany = $userInfo.positions?.filter((company: { currentCompany: boolean; }) => company.currentCompany === true);
 	console.log("USERINFO NAVBAR", userInfo);

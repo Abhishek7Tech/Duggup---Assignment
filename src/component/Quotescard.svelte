@@ -1,10 +1,9 @@
 <script lang="ts">
 	import * as Card from '$lib/components/ui/card';
-	interface Quote {
-		img: string;
-		quote: string;
-	}
-	export let quotesArray: Quote[] = [];
+	import type {Quotes} from "../types/types";
+
+	
+	export let quotesArray: Quotes[] = [];
 
 	const updatedArray = quotesArray.map((quotes) => {
         let newQuote = quotes.quote.length > 80 ? quotes.quote.slice(0, 85)+"..." : quotes.quote

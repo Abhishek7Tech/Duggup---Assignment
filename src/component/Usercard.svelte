@@ -2,36 +2,8 @@
 	import * as Card from '$lib/components/ui/card/index.js';
 	import * as Avatar from '$lib/components/ui/avatar';
 	import Buttons from './Buttons.svelte';
-	interface Quote {
-  img: string;
-  quote: string;
-}
+	import type { Details } from '../types/types';
 
-interface Position {
-  id: string;
-  date: string;
-  img: string;
-  companyName: string;
-  location: string;
-  status: string;
-  joining: string;
-  currentCompany: boolean;
-  quotes: Quote[];
-  position: string;
-  jobType: string;
-}
-
-interface Details {
-  id: number;
-  name: string;
-  label: string;
-  profilePicture: string;
-  profilePictureFull: string;
-  bio: string;
-  positions: Position[];
-  logo: string;
-  logoName: string;
-}
 	export let userInfo: Details[];
 	const userName = userInfo[0].name;
 	const profilePicture = userInfo[0].profilePictureFull;

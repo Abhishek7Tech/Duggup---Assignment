@@ -9,8 +9,6 @@
 		TimelineContent,
 	} from '$lib/components/ui/svelte-vertical-timeline';
 	// @ts-ignore
-	import Quotescard from './Quotescard.svelte';
-	import Positioncard from './Positioncard.svelte';
 
 	/**
 	 * @type {any}

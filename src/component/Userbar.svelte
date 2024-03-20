@@ -4,22 +4,16 @@
 	import * as Popover from '$lib/components/ui/popover/index.js';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { cn } from '$lib/utils.js';
-	import { onMount, setContext, tick } from 'svelte';
+	import { tick } from 'svelte';
 	import Check from 'lucide-svelte/icons/check';
 	import * as Avatar from '$lib/components/ui/avatar';
 	import { usersNames } from '../stores';
-	import {navigating, page} from "$app/stores";
-	import { goto } from '$app/navigation';
-	import { redirect } from '@sveltejs/kit';
+	import type {Users} from "../types/types";
 
 	export let userData;
 	const profilePicture = userData[0].profilePicture;
 	const userName = userData[0].name;
-	interface Users {
-		value: string,
-		label: string,
-		id:number
-	}
+	
 	let users: Users[] = [];
 
 		usersNames.subscribe((info) => users = info);
